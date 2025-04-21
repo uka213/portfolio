@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JOLIE</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="ファッションブランドサイト">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- バナー切り替え -->
+    <script src="banner.js" defer></script>
+    <!-- メインカルーセル機能  -->
+    <script src="carousel.js" defer></script>
+    <!-- ランキングカルーセル機能  -->
+    <script src="ranking.js" defer></script>
+    <!-- タブ切り替え機能  -->
+    <script src="tab.js" defer></script>
+    <!-- Font Awesome 読み込み  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <!-- .banner-wrapper の閉じタグ -->
+      <div class="banner-wrapper">
+        <div class="message" id="message"></div>
+      </div>
+     <!-- ハンバーガーメニュー 
+     <button id="menu" onclick="document.getElementById('menu').style.display = 'block'">
+      <img src="images/header/jolie2.png" alt="ナビゲーションを開く">
+     </button>-->
+   
+     <img src="images/header/menu.png" alt="ナビゲーションを開く" id="menu" onclick="document.getElementById('menu').style.display = 'block'">
+     <!-- ロゴ -->
+     <a href="index.html" id="logo"><img src="images/header/jolie.png" alt="ロゴ"></a>
+     <!-- ナビゲーション -->
+      <nav id="nav-pc">
+        <ul>
+          <li><a href="search.html" id="search"><img src="images/header/search.png" alt="検索"></a></li>
+          <li><a href="heart.html" id="heart"><img src="images/header/heart.png" alt="お気に入り"></a></li>
+          <li><a href="cart.html" id="cart"><img src="images/header/cart.png" alt="カート"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <!-- メインビジュアル&スライダー -->
+        <section class="carousel">
+          <div class="main-carousel-track">
+            <img class="slide" src="images/banner/main.png" alt="メイン画像">
+            <img class="slide" src="images/banner/comingsoon.png" alt="新しいトレンチコート近日公開">
+            <img class="slide" src="images/banner/rabbit.png" alt="コラボ商品">
+            <img class="slide" src="images/banner/sale.png" alt="冬服セール">
+          </div>
+          <div class="carousel-dots"></div>
+        </section>        
+        <!-- カテゴリー -->
+        <section id="category">
+          <div>
+           <h2>カテゴリー別商品</h2>
+           <h1>CATEGORY</h1>
+          </div>
+          <!-- カーソル当てると画像が変わる -->
+          <div class="category-photo">
+            <div id="item1" class="category-item">
+             <img src="images/category/category1/outer.png" onmouseover="this.src='images/category/category2/outer2.png'" onmouseout="this.src='images/category/category1/outer.png'" alt="アウター">
+            </div>
+            <div id="item2" class="category-item">
+              <img src="images/category/category1/tops.png" onmouseover="this.src='images/category/category2/tops2.png'" onmouseout="this.src='images/category/category1/tops.png'" alt="トップス">
+            </div>
+            <div id="item3" class="category-item">
+              <img src="images/category/category1/bottom.png" onmouseover="this.src='images/category/category2/bottom2.png'" onmouseout="this.src='images/category/category1/bottom.png'" alt="ボトム">
+            </div>
+            <div id="item4" class="category-item">
+              <img src="images/category/category1/dress.png" onmouseover="this.src='images/category/category2/dress2.png'" onmouseout="this.src='images/category/category1/dress.png'" alt="ドレス">
+            </div>
+            <div id="item5" class="category-item">
+              <img src="images/category/category1/setup.png" onmouseover="this.src='images/category/category2/setup2.png'" onmouseout="this.src='images/category/category1/setup.png'" alt="セットアップ">
+            </div>
+            <div id="item6" class="category-item">
+              <img src="images/category/category1/accessory.png" onmouseover="this.src='images/category/category2/accessory2.png'" onmouseout="this.src='images/category/category1/accessory.png'" alt="アクセサリー">
+            </div>
+            <div id="item7" class="category-item">
+              <img src="images/category/category1/bag.png" onmouseover="this.src='images/category/category2/bag2.png'" onmouseout="this.src='images/category/category1/bag.png'" alt="バッグ">
+            </div>
+            <div id="item8" class="category-item">
+              <img src="images/category/category1/shoes.png" onmouseover="this.src='images/category/category2/shoes2.png'" onmouseout="this.src='images/category/category1/shoes.png'" alt="シューズ">
+            </div>
+            <div id="item9" class="category-item">
+              <img src="images/category/category1/other.png" onmouseover="this.src='images/category/category2/other2.png'" onmouseout="this.src='images/category/category1/other.png'" alt="その他">
+            </div>
+          </div>
+        </section>
+        <!-- アイテム -->
+        <section id="item">
+          <div  id="item-photo">
+            <img src="images/banner/item2.png" alt="春のトレンド商品">
+          </div>
+        </section>
+        <!-- ランキング -->
+        <section id="ranking">
+          <h2>見逃せない！人気沸騰中アイテム！</h2>
+          <h1>RANKING</h1>
+          <div class="ranking-category">
+            <p data-tab="all" class="active">All</p>
+            <p data-tab="outer">Outer</p>
+            <p data-tab="tops">Tops</p>
+            <p data-tab="bottom">Bottom</p>
+            <p data-tab="dress">Dress</p>
+            <p data-tab="setup">Set up</p>
+            <p data-tab="accessory">Accessory</p>
+            <p data-tab="bag">Bag</p>
+            <p data-tab="shoes">Shoes</p>
+            <p data-tab="other">Other</p>
+          </div>
+          <div class="ranking-content">
+            <!-- All -->
+            <div class="tab-content active" data-content="all">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+               <div class="rankingphoto">
+                <div class="carousel-track ranking-track">
+                  <img src="images/ranking/1.png" alt="1">
+                  <img src="images/ranking/setup2.png" alt="2">
+                  <img src="images/ranking/3.png" alt="3">
+                  <img src="images/ranking/4.png" alt="4">
+                  <img src="images/ranking/outer5.png" alt="5">
+                  <img src="images/ranking/6.png" alt="6">
+                </div>
+               </div>
+               <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <!-- outer -->
+            <div class="tab-content" data-content="outer">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+                <div class="rankingphoto">
+                  <div class="carousel-track ranking-track">
+                    <img src="images/ranking/outer1.png" alt="1">
+                    <img src="images/ranking/outer2.png" alt="2">
+                    <img src="images/ranking/outer3.png" alt="3">
+                    <img src="images/ranking/outer4.png" alt="4">
+                    <img src="images/ranking/outer5.png" alt="5">
+                    <img src="images/ranking/outer6.png" alt="6">
+                  </div>
+                </div>
+                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+   
+              </div>
+            </div>
+            <!-- tops -->
+            <div class="tab-content" data-content="tops">
+              <div class="rankingphoto-wrapper">
+                <div class="rankingphoto">
+                 <img src="images/ranking/ranking.comingsoon.png" class=ranking-other alt="comingsoon">
+                </div>
+              </div>
+            </div>
+            <!-- bottom -->
+            <div class="tab-content" data-content="bottom">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+                <div class="rankingphoto">
+                  <div class="carousel-track ranking-track">
+                    <img src="images/ranking/bottom1.png" alt="1">
+                    <img src="images/ranking/bottom2.png" alt="2">
+                    <img src="images/ranking/bottom3.png" alt="3">
+                    <img src="images/ranking/bottom4.png" alt="4">
+                    <img src="images/ranking/setup5.png" alt="5">
+                    <img src="images/ranking/setup6.png" alt="6">
+                  </div>
+                </div>
+                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <!-- Dress -->
+            <div class="tab-content" data-content="dress">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+                <div class="rankingphoto">
+                  <div class="carousel-track ranking-track">
+                    <img src="images/ranking/1.png" alt="1">
+                    <img src="images/ranking/2.png" alt="2">
+                    <img src="images/ranking/3.png" alt="3">
+                    <img src="images/ranking/4.png" alt="4">
+                    <img src="images/ranking/5.png" alt="5">
+                    <img src="images/ranking/6.png" alt="6">
+                  </div>
+                </div>
+                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <!-- setup -->
+            <div class="tab-content" data-content="setup">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+                <div class="rankingphoto">
+                  <div class="carousel-track ranking-track">
+                    <img src="images/ranking/setup1.png" alt="1">
+                    <img src="images/ranking/setup2.png" alt="2">
+                    <img src="images/ranking/setup3.png" alt="3">
+                    <img src="images/ranking/setup4.png" alt="4">
+                    <img src="images/ranking/setup5.png" alt="5">
+                    <img src="images/ranking/setup6.png" alt="6">
+                  </div>
+                </div>
+                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <!-- accessory -->
+            <div class="tab-content" data-content="accessory">
+              <div class="rankingphoto-wrapper">
+                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+                <div class="rankingphoto">
+                  <div class="carousel-track ranking-track">
+                    <img src="images/ranking/accessory1.png" alt="1">
+                    <img src="images/ranking/accessory2.png" alt="2">
+                    <img src="images/ranking/accessory3.png" alt="3">
+                    <img src="images/ranking/accessory4.png" alt="4">
+                    <img src="images/ranking/accessory5.png" alt="5">
+                    <img src="images/ranking/accessory6.png" alt="6">
+                  </div>
+                </div>
+                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <!-- bag -->
+            <div class="tab-content" data-content="bag">
+              <div class="rankingphoto-wrapper">
+                <div class="rankingphoto">
+                 <img src="images/ranking/ranking.comingsoon.png" class=ranking-other alt="comingsoon">
+                </div>
+              </div>
+            </div>
+            <!-- shoes -->
+            <div class="tab-content" data-content="shoes">
+              <div class="rankingphoto-wrapper">
+                <div class="rankingphoto">
+                 <img src="images/ranking/ranking.comingsoon.png" class=ranking-other alt="comingsoon">
+                </div>
+              </div>
+            </div>
+            <!-- other -->
+            <div class="tab-content" data-content="other">
+              <div class="rankingphoto-wrapper">
+                <div class="rankingphoto">
+                 <img src="images/ranking/ranking.comingsoon.png" class=ranking-other alt="comingsoon">
+                </div>
+              </div>
+            </div>
+          <!-- カーソル当てると画像が変わる -->
+          <div class="viewmore">
+            <img src="images/ranking/viewmore1.png" onmouseover="this.src='images/ranking/viewmore2.png'" onmouseout="this.src='images/ranking/viewmore1.png'" alt="もっと見る">
+          </div>
+        </section>
+        <!-- トピックス -->
+        <section id="topics">
+          <h1>TOPICS</h1>
+          <!-- カーソル当てると画像が変わる -->
+          <div id="topics-photo">
+            <img src="images/banner/main2.png" onmouseover="this.src='images/banner/main3.png'" onmouseout="this.src='images/banner/main2.png'" alt="20周年">
+            <img src="images/banner/comingsoon2.png" onmouseover="this.src='images/banner/comingsoon3.png'" onmouseout="this.src='images/banner/comingsoon2.png'" alt="カミングスーン">
+            <img src="images/banner/sale2.png" onmouseover="this.src='images/banner/sale3.png'" onmouseout="this.src='images/banner/sale2.png'" alt="セール">
+            <img src="images/banner/rabbit2.png" onmouseover="this.src='images/banner/rabbit3.png'" onmouseout="this.src='images/banner/rabbit2.png'" alt="姫乃夢叶さんとコラボ">
+          </div>
+          <!-- カーソル当てると画像が変わる -->
+          <div class="viewmore2">
+            <img src="images/ranking/viewmore1.png" onmouseover="this.src='images/ranking/viewmore2.png'" onmouseout="this.src='images/ranking/viewmore1.png'" alt="もっと見る">
+          </div>
+        </section>
+        
+      </article>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".ranking-category p");
+        const contents = document.querySelectorAll(".tab-content");
+    
+        tabs.forEach(tab => {
+          tab.addEventListener("click", () => {
+            const selectedTab = tab.getAttribute("data-tab");
+    
+            // タブの見た目切り替え
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+    
+            // コンテンツ切り替え
+            contents.forEach(content => {
+              if (content.getAttribute("data-content") === selectedTab) {
+                content.classList.add("active");
+              } else {
+                content.classList.remove("active");
+              }
+            });
+          });
+        });
+      });
+    </script>    
+  </body>
+  <!-- フッター -->
+  <footer>
+    <div id="footer-link">
+      <a href="login.html">LOG IN</a>
+      <a href="information">INFORMATION</a>
+      <a href="q&a">Q&A</a>
+      <a href="recruit">RECRUIT</a>
+      <a href="mailmagazine">MAIL MAGAZINE</a>
+    </div>
+    <div id="fllowus">
+      <img src="images/footer/followus.png">
+    </div>
+
+    <!-- sns -->
+    <div id="sns">
+      <img src="images/footer/tiktok.png" alt="ティックトック">
+      <img src="images/footer/instagram.png" alt="インスタグラム">
+      <img src="images/footer/youtube.png" alt="ユーチューブ">
+      <img src="images/footer/line.png" alt="ライン">
+      <img src="images/footer/facebook.png" alt="フェイスブック">
+    </div>
+
+    <!-- ロゴ -->
+    <div id="footer-logo">
+      <img src="images/footer/jolie2.png">
+    </div>
+    <h3>Copyright © 2025 Jolie. All Rights Reserved.</h3>
+  </footer>  
+</html>
+
